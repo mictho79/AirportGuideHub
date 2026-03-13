@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="12" fill="#0d1b2a"/>
+  <!-- Airplane body -->
+  <g transform="translate(32,32) rotate(-45)">
+    <!-- Fuselage -->
+    <ellipse cx="0" cy="0" rx="18" ry="5" fill="#4fc3f7"/>
+    <!-- Nose cone -->
+    <ellipse cx="16" cy="0" rx="4" ry="3.5" fill="#81d4fa"/>
+    <!-- Main wings -->
+    <polygon points="-2,-4 6,-18 10,-18 4,-4" fill="#4fc3f7"/>
+    <polygon points="-2,4 6,18 10,18 4,4" fill="#4fc3f7"/>
+    <!-- Tail fins -->
+    <polygon points="-14,-3 -16,-10 -10,-10 -10,-3" fill="#81d4fa"/>
+    <polygon points="-14,3 -16,10 -10,10 -10,3" fill="#81d4fa"/>
+    <!-- Window -->
+    <circle cx="4" cy="0" r="2" fill="#0d1b2a"/>
+  </g>
+  <!-- Runway dots -->
+  <rect x="8" y="55" width="6" height="3" rx="1.5" fill="#4fc3f7" opacity="0.6"/>
+  <rect x="19" y="55" width="6" height="3" rx="1.5" fill="#4fc3f7" opacity="0.6"/>
+  <rect x="30" y="55" width="6" height="3" rx="1.5" fill="#4fc3f7" opacity="0.6"/>
+  <rect x="41" y="55" width="6" height="3" rx="1.5" fill="#4fc3f7" opacity="0.6"/>
+  <rect x="50" y="55" width="6" height="3" rx="1.5" fill="#4fc3f7" opacity="0.6"/>
+</svg>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AirportGuideHub – World's Top 100 Airport Travel Guides</title>
+  <meta name="description" content="Free travel guides for the world's 100 busiest airports. Find terminal maps, transport, lounges, WiFi, restaurants, and travel tips for every major airport.">
+  <link rel="canonical" href="https://airportguidehub.com/">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:title" content="AirportGuideHub – World's Top 100 Airport Travel Guides">
+  <meta property="og:description" content="Free travel guides for the world's 100 busiest airports. Find terminal maps, transport, lounges, WiFi, and more.">
+  <meta property="og:url" content="https://airportguidehub.com/">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AirportGuideHub",
+    "url": "https://airportguidehub.com",
+    "description": "Comprehensive travel guides for the world's 100 busiest airports",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://airportguidehub.com/airports/{search_term}-airport-guide.html",
+      "query-input": "required name=search_term"
+    }
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a2e; background: #f8f9fa; line-height: 1.7; }
+    a { color: #0066cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header { background: #0d1b2a; color: white; padding: 1.25rem 0; }
+    header .container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+    .logo { font-size: 1.4rem; font-weight: 700; color: white; }
+    .logo span { color: #4fc3f7; }
+    nav a { color: #cfd8dc; margin-left: 1.5rem; font-size: 0.9rem; }
+    nav a:hover { color: white; text-decoration: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .hero { background: linear-gradient(135deg, #0d1b2a 0%, #1a3a5c 100%); color: white; padding: 4rem 0 3rem; }
+    .hero h1 { font-size: 2.6rem; color: white; line-height: 1.25; margin-bottom: 1rem; }
+    .hero p { color: #b0bec5; font-size: 1.15rem; max-width: 640px; margin-bottom: 1.5rem; }
+    .stats { display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 1.5rem; }
+    .stat { text-align: center; }
+    .stat-num { font-size: 1.8rem; font-weight: 700; color: #4fc3f7; }
+    .stat-label { font-size: 0.8rem; color: #90a4ae; text-transform: uppercase; letter-spacing: 0.05em; }
+    main { padding: 3rem 0; }
+    h2 { font-size: 1.6rem; color: #0d1b2a; margin-bottom: 1.2rem; }
+    .section-desc { color: #555; margin-bottom: 1.5rem; font-size: 0.95rem; }
+    .region-section { margin-bottom: 3rem; }
+    .region-title { font-size: 1.1rem; font-weight: 600; color: #1a3a5c; border-left: 4px solid #4fc3f7; padding-left: 0.75rem; margin-bottom: 1rem; }
+    .airport-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.85rem; }
+    .airport-card { background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1rem 1.1rem; transition: box-shadow 0.2s, border-color 0.2s; display: block; color: inherit; }
+    .airport-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); border-color: #4fc3f7; text-decoration: none; }
+    .airport-card .iata { font-size: 1.3rem; font-weight: 700; color: #0066cc; display: block; }
+    .airport-card .name { font-size: 0.82rem; color: #444; margin-top: 0.25rem; display: block; line-height: 1.3; }
+    .airport-card .city { font-size: 0.78rem; color: #888; margin-top: 0.15rem; display: block; }
+    .features { background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 2rem; margin: 2rem 0; }
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.2rem; margin-top: 1rem; }
+    .feature { display: flex; align-items: flex-start; gap: 0.6rem; }
+    .feature-icon { font-size: 1.4rem; flex-shrink: 0; }
+    .feature-text strong { display: block; font-size: 0.9rem; color: #0d1b2a; }
+    .feature-text span { font-size: 0.8rem; color: #666; }
+    footer { background: #0d1b2a; color: #90a4ae; padding: 2rem 0; margin-top: 2rem; text-align: center; font-size: 0.85rem; }
+    footer a { color: #90a4ae; }
+    footer a:hover { color: white; }
+    @media (max-width: 768px) { .hero h1 { font-size: 1.8rem; } .airport-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="index.html" class="logo">Airport<span>Guide</span>Hub</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#airports">All Airports</a>
+      <a href="#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>World Airport Travel Guides</h1>
+    <p>Practical, up-to-date guides for the 100 busiest airports. Terminals, transport, lounges, WiFi, food, and travel tips — everything you need before you fly.</p>
+    <div class="stats">
+      <div class="stat"><div class="stat-num">100</div><div class="stat-label">Airport Guides</div></div>
+      <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Countries</div></div>
+      <div class="stat"><div class="stat-num">6</div><div class="stat-label">Continents</div></div>
+    </div>
+  </div>
+</section>
+
+<main>
+  <div class="container">
+
+    <div class="features">
+      <h2>What's in Each Guide</h2>
+      <div class="feature-grid">
+        <div class="feature"><span class="feature-icon">🏢</span><div class="feature-text"><strong>Terminal Maps</strong><span>Layout, gates, connections</span></div></div>
+        <div class="feature"><span class="feature-icon">📶</span><div class="feature-text"><strong>WiFi Access</strong><span>Networks, passwords, speed</span></div></div>
+        <div class="feature"><span class="feature-icon">🚇</span><div class="feature-text"><strong>City Transport</strong><span>Rail, metro, bus, taxi</span></div></div>
+        <div class="feature"><span class="feature-icon">🛋️</span><div class="feature-text"><strong>Airport Lounges</strong><span>Priority Pass, airline lounges</span></div></div>
+        <div class="feature"><span class="feature-icon">🏨</span><div class="feature-text"><strong>Nearby Hotels</strong><span>On-site and close options</span></div></div>
+        <div class="feature"><span class="feature-icon">🍽️</span><div class="feature-text"><strong>Food & Dining</strong><span>Restaurants and cafés</span></div></div>
+      </div>
+    </div>
+
+    <section id="airports">
+      <h2>Browse All 100 Airport Guides</h2>
+      <p class="section-desc">Select an airport below to access its full travel guide including terminals, transport, lounges, and travel tips.</p>
+
+      <!-- NORTH AMERICA -->
+      <div class="region-section">
+        <div class="region-title">North America</div>
+        <div class="airport-grid">
+          <a href="airports/atl-airport-guide.html" class="airport-card"><span class="iata">ATL</span><span class="name">Hartsfield-Jackson Atlanta International</span><span class="city">Atlanta, USA</span></a>
+          <a href="airports/dfw-airport-guide.html" class="airport-card"><span class="iata">DFW</span><span class="name">Dallas/Fort Worth International</span><span class="city">Dallas, USA</span></a>
+          <a href="airports/ord-airport-guide.html" class="airport-card"><span class="iata">ORD</span><span class="name">O'Hare International Airport</span><span class="city">Chicago, USA</span></a>
+          <a href="airports/lax-airport-guide.html" class="airport-card"><span class="iata">LAX</span><span class="name">Los Angeles International Airport</span><span class="city">Los Angeles, USA</span></a>
+          <a href="airports/den-airport-guide.html" class="airport-card"><span class="iata">DEN</span><span class="name">Denver International Airport</span><span class="city">Denver, USA</span></a>
+          <a href="airports/jfk-airport-guide.html" class="airport-card"><span class="iata">JFK</span><span class="name">John F. Kennedy International Airport</span><span class="city">New York, USA</span></a>
+          <a href="airports/sfo-airport-guide.html" class="airport-card"><span class="iata">SFO</span><span class="name">San Francisco International Airport</span><span class="city">San Francisco, USA</span></a>
+          <a href="airports/phx-airport-guide.html" class="airport-card"><span class="iata">PHX</span><span class="name">Phoenix Sky Harbor International</span><span class="city">Phoenix, USA</span></a>
+          <a href="airports/las-airport-guide.html" class="airport-card"><span class="iata">LAS</span><span class="name">Harry Reid International Airport</span><span class="city">Las Vegas, USA</span></a>
+          <a href="airports/clt-airport-guide.html" class="airport-card"><span class="iata">CLT</span><span class="name">Charlotte Douglas International Airport</span><span class="city">Charlotte, USA</span></a>
+          <a href="airports/mia-airport-guide.html" class="airport-card"><span class="iata">MIA</span><span class="name">Miami International Airport</span><span class="city">Miami, USA</span></a>
+          <a href="airports/sea-airport-guide.html" class="airport-card"><span class="iata">SEA</span><span class="name">Seattle-Tacoma International Airport</span><span class="city">Seattle, USA</span></a>
+          <a href="airports/msp-airport-guide.html" class="airport-card"><span class="iata">MSP</span><span class="name">Minneapolis-Saint Paul International</span><span class="city">Minneapolis, USA</span></a>
+          <a href="airports/iah-airport-guide.html" class="airport-card"><span class="iata">IAH</span><span class="name">George Bush Intercontinental Airport</span><span class="city">Houston, USA</span></a>
+          <a href="airports/dtw-airport-guide.html" class="airport-card"><span class="iata">DTW</span><span class="name">Detroit Metropolitan Airport</span><span class="city">Detroit, USA</span></a>
+          <a href="airports/ewr-airport-guide.html" class="airport-card"><span class="iata">EWR</span><span class="name">Newark Liberty International Airport</span><span class="city">Newark, USA</span></a>
+          <a href="airports/phl-airport-guide.html" class="airport-card"><span class="iata">PHL</span><span class="name">Philadelphia International Airport</span><span class="city">Philadelphia, USA</span></a>
+          <a href="airports/iad-airport-guide.html" class="airport-card"><span class="iata">IAD</span><span class="name">Washington Dulles International Airport</span><span class="city">Washington DC, USA</span></a>
+          <a href="airports/mex-airport-guide.html" class="airport-card"><span class="iata">MEX</span><span class="name">Benito Juárez International Airport</span><span class="city">Mexico City, Mexico</span></a>
+          <a href="airports/yyz-airport-guide.html" class="airport-card"><span class="iata">YYZ</span><span class="name">Toronto Pearson International Airport</span><span class="city">Toronto, Canada</span></a>
+        </div>
+      </div>
+
+      <!-- EUROPE -->
+      <div class="region-section">
+        <div class="region-title">Europe</div>
+        <div class="airport-grid">
+          <a href="airports/lhr-airport-guide.html" class="airport-card"><span class="iata">LHR</span><span class="name">London Heathrow Airport</span><span class="city">London, UK</span></a>
+          <a href="airports/cdg-airport-guide.html" class="airport-card"><span class="iata">CDG</span><span class="name">Charles de Gaulle Airport</span><span class="city">Paris, France</span></a>
+          <a href="airports/ams-airport-guide.html" class="airport-card"><span class="iata">AMS</span><span class="name">Amsterdam Airport Schiphol</span><span class="city">Amsterdam, Netherlands</span></a>
+          <a href="airports/ist-airport-guide.html" class="airport-card"><span class="iata">IST</span><span class="name">Istanbul Airport</span><span class="city">Istanbul, Turkey</span></a>
+          <a href="airports/muc-airport-guide.html" class="airport-card"><span class="iata">MUC</span><span class="name">Munich Airport</span><span class="city">Munich, Germany</span></a>
+          <a href="airports/man-airport-guide.html" class="airport-card"><span class="iata">MAN</span><span class="name">Manchester Airport</span><span class="city">Manchester, UK</span></a>
+          <a href="airports/ory-airport-guide.html" class="airport-card"><span class="iata">ORY</span><span class="name">Paris Orly Airport</span><span class="city">Paris, France</span></a>
+          <a href="airports/lgw-airport-guide.html" class="airport-card"><span class="iata">LGW</span><span class="name">London Gatwick Airport</span><span class="city">London, UK</span></a>
+          <a href="airports/mad-airport-guide.html" class="airport-card"><span class="iata">MAD</span><span class="name">Adolfo Suárez Madrid-Barajas Airport</span><span class="city">Madrid, Spain</span></a>
+          <a href="airports/fra-airport-guide.html" class="airport-card"><span class="iata">FRA</span><span class="name">Frankfurt Airport</span><span class="city">Frankfurt, Germany</span></a>
+          <a href="airports/zrh-airport-guide.html" class="airport-card"><span class="iata">ZRH</span><span class="name">Zurich Airport</span><span class="city">Zurich, Switzerland</span></a>
+          <a href="airports/svo-airport-guide.html" class="airport-card"><span class="iata">SVO</span><span class="name">Sheremetyevo International Airport</span><span class="city">Moscow, Russia</span></a>
+          <a href="airports/bcn-airport-guide.html" class="airport-card"><span class="iata">BCN</span><span class="name">Barcelona-El Prat Airport</span><span class="city">Barcelona, Spain</span></a>
+          <a href="airports/fco-airport-guide.html" class="airport-card"><span class="iata">FCO</span><span class="name">Leonardo da Vinci International Airport</span><span class="city">Rome, Italy</span></a>
+          <a href="airports/dub-airport-guide.html" class="airport-card"><span class="iata">DUB</span><span class="name">Dublin Airport</span><span class="city">Dublin, Ireland</span></a>
+          <a href="airports/vie-airport-guide.html" class="airport-card"><span class="iata">VIE</span><span class="name">Vienna International Airport</span><span class="city">Vienna, Austria</span></a>
+          <a href="airports/cph-airport-guide.html" class="airport-card"><span class="iata">CPH</span><span class="name">Copenhagen Airport</span><span class="city">Copenhagen, Denmark</span></a>
+          <a href="airports/arn-airport-guide.html" class="airport-card"><span class="iata">ARN</span><span class="name">Stockholm Arlanda Airport</span><span class="city">Stockholm, Sweden</span></a>
+          <a href="airports/osl-airport-guide.html" class="airport-card"><span class="iata">OSL</span><span class="name">Oslo Gardermoen Airport</span><span class="city">Oslo, Norway</span></a>
+          <a href="airports/hel-airport-guide.html" class="airport-card"><span class="iata">HEL</span><span class="name">Helsinki Airport</span><span class="city">Helsinki, Finland</span></a>
+          <a href="airports/lis-airport-guide.html" class="airport-card"><span class="iata">LIS</span><span class="name">Lisbon Humberto Delgado Airport</span><span class="city">Lisbon, Portugal</span></a>
+          <a href="airports/ath-airport-guide.html" class="airport-card"><span class="iata">ATH</span><span class="name">Athens International Airport</span><span class="city">Athens, Greece</span></a>
+          <a href="airports/bru-airport-guide.html" class="airport-card"><span class="iata">BRU</span><span class="name">Brussels Airport</span><span class="city">Brussels, Belgium</span></a>
+          <a href="airports/mxp-airport-guide.html" class="airport-card"><span class="iata">MXP</span><span class="name">Milan Malpensa Airport</span><span class="city">Milan, Italy</span></a>
+          <a href="airports/waw-airport-guide.html" class="airport-card"><span class="iata">WAW</span><span class="name">Warsaw Chopin Airport</span><span class="city">Warsaw, Poland</span></a>
+          <a href="airports/bud-airport-guide.html" class="airport-card"><span class="iata">BUD</span><span class="name">Budapest Ferenc Liszt International</span><span class="city">Budapest, Hungary</span></a>
+          <a href="airports/prg-airport-guide.html" class="airport-card"><span class="iata">PRG</span><span class="name">Václav Havel Airport Prague</span><span class="city">Prague, Czech Republic</span></a>
+          <a href="airports/dus-airport-guide.html" class="airport-card"><span class="iata">DUS</span><span class="name">Düsseldorf Airport</span><span class="city">Düsseldorf, Germany</span></a>
+          <a href="airports/stn-airport-guide.html" class="airport-card"><span class="iata">STN</span><span class="name">London Stansted Airport</span><span class="city">London, UK</span></a>
+          <a href="airports/ayt-airport-guide.html" class="airport-card"><span class="iata">AYT</span><span class="name">Antalya Airport</span><span class="city">Antalya, Turkey</span></a>
+          <a href="airports/gva-airport-guide.html" class="airport-card"><span class="iata">GVA</span><span class="name">Geneva Airport</span><span class="city">Geneva, Switzerland</span></a>
+          <a href="airports/edi-airport-guide.html" class="airport-card"><span class="iata">EDI</span><span class="name">Edinburgh Airport</span><span class="city">Edinburgh, UK</span></a>
+          <a href="airports/pmi-airport-guide.html" class="airport-card"><span class="iata">PMI</span><span class="name">Palma de Mallorca Airport</span><span class="city">Palma, Spain</span></a>
+          <a href="airports/lin-airport-guide.html" class="airport-card"><span class="iata">LIN</span><span class="name">Milan Linate Airport</span><span class="city">Milan, Italy</span></a>
+          <a href="airports/dme-airport-guide.html" class="airport-card"><span class="iata">DME</span><span class="name">Domodedovo International Airport</span><span class="city">Moscow, Russia</span></a>
+        </div>
+      </div>
+
+      <!-- ASIA PACIFIC -->
+      <div class="region-section">
+        <div class="region-title">Asia Pacific</div>
+        <div class="airport-grid">
+          <a href="airports/dxb-airport-guide.html" class="airport-card"><span class="iata">DXB</span><span class="name">Dubai International Airport</span><span class="city">Dubai, UAE</span></a>
+          <a href="airports/hnd-airport-guide.html" class="airport-card"><span class="iata">HND</span><span class="name">Tokyo Haneda Airport</span><span class="city">Tokyo, Japan</span></a>
+          <a href="airports/pek-airport-guide.html" class="airport-card"><span class="iata">PEK</span><span class="name">Beijing Capital International Airport</span><span class="city">Beijing, China</span></a>
+          <a href="airports/pvg-airport-guide.html" class="airport-card"><span class="iata">PVG</span><span class="name">Shanghai Pudong International Airport</span><span class="city">Shanghai, China</span></a>
+          <a href="airports/sin-airport-guide.html" class="airport-card"><span class="iata">SIN</span><span class="name">Singapore Changi Airport</span><span class="city">Singapore</span></a>
+          <a href="airports/icn-airport-guide.html" class="airport-card"><span class="iata">ICN</span><span class="name">Incheon International Airport</span><span class="city">Seoul, South Korea</span></a>
+          <a href="airports/can-airport-guide.html" class="airport-card"><span class="iata">CAN</span><span class="name">Guangzhou Baiyun International Airport</span><span class="city">Guangzhou, China</span></a>
+          <a href="airports/bkk-airport-guide.html" class="airport-card"><span class="iata">BKK</span><span class="name">Suvarnabhumi Airport</span><span class="city">Bangkok, Thailand</span></a>
+          <a href="airports/cgk-airport-guide.html" class="airport-card"><span class="iata">CGK</span><span class="name">Soekarno-Hatta International Airport</span><span class="city">Jakarta, Indonesia</span></a>
+          <a href="airports/kul-airport-guide.html" class="airport-card"><span class="iata">KUL</span><span class="name">Kuala Lumpur International Airport</span><span class="city">Kuala Lumpur, Malaysia</span></a>
+          <a href="airports/ctu-airport-guide.html" class="airport-card"><span class="iata">CTU</span><span class="name">Chengdu Tianfu International Airport</span><span class="city">Chengdu, China</span></a>
+          <a href="airports/del-airport-guide.html" class="airport-card"><span class="iata">DEL</span><span class="name">Indira Gandhi International Airport</span><span class="city">Delhi, India</span></a>
+          <a href="airports/sha-airport-guide.html" class="airport-card"><span class="iata">SHA</span><span class="name">Shanghai Hongqiao International Airport</span><span class="city">Shanghai, China</span></a>
+          <a href="airports/ckg-airport-guide.html" class="airport-card"><span class="iata">CKG</span><span class="name">Chongqing Jiangbei International Airport</span><span class="city">Chongqing, China</span></a>
+          <a href="airports/szx-airport-guide.html" class="airport-card"><span class="iata">SZX</span><span class="name">Shenzhen Bao'an International Airport</span><span class="city">Shenzhen, China</span></a>
+          <a href="airports/hgh-airport-guide.html" class="airport-card"><span class="iata">HGH</span><span class="name">Hangzhou Xiaoshan International Airport</span><span class="city">Hangzhou, China</span></a>
+          <a href="airports/kmg-airport-guide.html" class="airport-card"><span class="iata">KMG</span><span class="name">Kunming Changshui International Airport</span><span class="city">Kunming, China</span></a>
+          <a href="airports/nrt-airport-guide.html" class="airport-card"><span class="iata">NRT</span><span class="name">Narita International Airport</span><span class="city">Tokyo, Japan</span></a>
+          <a href="airports/doh-airport-guide.html" class="airport-card"><span class="iata">DOH</span><span class="name">Hamad International Airport</span><span class="city">Doha, Qatar</span></a>
+          <a href="airports/bom-airport-guide.html" class="airport-card"><span class="iata">BOM</span><span class="name">Chhatrapati Shivaji Maharaj International</span><span class="city">Mumbai, India</span></a>
+          <a href="airports/kix-airport-guide.html" class="airport-card"><span class="iata">KIX</span><span class="name">Kansai International Airport</span><span class="city">Osaka, Japan</span></a>
+          <a href="airports/hkg-airport-guide.html" class="airport-card"><span class="iata">HKG</span><span class="name">Hong Kong International Airport</span><span class="city">Hong Kong</span></a>
+          <a href="airports/syd-airport-guide.html" class="airport-card"><span class="iata">SYD</span><span class="name">Sydney Kingsford Smith Airport</span><span class="city">Sydney, Australia</span></a>
+          <a href="airports/mel-airport-guide.html" class="airport-card"><span class="iata">MEL</span><span class="name">Melbourne Airport</span><span class="city">Melbourne, Australia</span></a>
+          <a href="airports/bne-airport-guide.html" class="airport-card"><span class="iata">BNE</span><span class="name">Brisbane Airport</span><span class="city">Brisbane, Australia</span></a>
+          <a href="airports/tlv-airport-guide.html" class="airport-card"><span class="iata">TLV</span><span class="name">Ben Gurion Airport</span><span class="city">Tel Aviv, Israel</span></a>
+          <a href="airports/ruh-airport-guide.html" class="airport-card"><span class="iata">RUH</span><span class="name">King Khalid International Airport</span><span class="city">Riyadh, Saudi Arabia</span></a>
+          <a href="airports/jed-airport-guide.html" class="airport-card"><span class="iata">JED</span><span class="name">King Abdulaziz International Airport</span><span class="city">Jeddah, Saudi Arabia</span></a>
+          <a href="airports/kwi-airport-guide.html" class="airport-card"><span class="iata">KWI</span><span class="name">Kuwait International Airport</span><span class="city">Kuwait City, Kuwait</span></a>
+          <a href="airports/bah-airport-guide.html" class="airport-card"><span class="iata">BAH</span><span class="name">Bahrain International Airport</span><span class="city">Manama, Bahrain</span></a>
+          <a href="airports/mct-airport-guide.html" class="airport-card"><span class="iata">MCT</span><span class="name">Muscat International Airport</span><span class="city">Muscat, Oman</span></a>
+          <a href="airports/auh-airport-guide.html" class="airport-card"><span class="iata">AUH</span><span class="name">Abu Dhabi International Airport</span><span class="city">Abu Dhabi, UAE</span></a>
+          <a href="airports/pkx-airport-guide.html" class="airport-card"><span class="iata">PKX</span><span class="name">Beijing Daxing International Airport</span><span class="city">Beijing, China</span></a>
+          <a href="airports/xiy-airport-guide.html" class="airport-card"><span class="iata">XIY</span><span class="name">Xi'an Xianyang International Airport</span><span class="city">Xi'an, China</span></a>
+          <a href="airports/wuh-airport-guide.html" class="airport-card"><span class="iata">WUH</span><span class="name">Wuhan Tianhe International Airport</span><span class="city">Wuhan, China</span></a>
+          <a href="airports/cgo-airport-guide.html" class="airport-card"><span class="iata">CGO</span><span class="name">Zhengzhou Xinzheng International Airport</span><span class="city">Zhengzhou, China</span></a>
+          <a href="airports/tao-airport-guide.html" class="airport-card"><span class="iata">TAO</span><span class="name">Qingdao Jiaodong International Airport</span><span class="city">Qingdao, China</span></a>
+          <a href="airports/tfu-airport-guide.html" class="airport-card"><span class="iata">TFU</span><span class="name">Chengdu Shuangliu International Airport</span><span class="city">Chengdu, China</span></a>
+        </div>
+      </div>
+
+      <!-- LATIN AMERICA -->
+      <div class="region-section">
+        <div class="region-title">Latin America</div>
+        <div class="airport-grid">
+          <a href="airports/gru-airport-guide.html" class="airport-card"><span class="iata">GRU</span><span class="name">São Paulo/Guarulhos International Airport</span><span class="city">São Paulo, Brazil</span></a>
+          <a href="airports/bog-airport-guide.html" class="airport-card"><span class="iata">BOG</span><span class="name">El Dorado International Airport</span><span class="city">Bogotá, Colombia</span></a>
+        </div>
+      </div>
+
+      <!-- AFRICA -->
+      <div class="region-section">
+        <div class="region-title">Africa</div>
+        <div class="airport-grid">
+          <a href="airports/cai-airport-guide.html" class="airport-card"><span class="iata">CAI</span><span class="name">Cairo International Airport</span><span class="city">Cairo, Egypt</span></a>
+          <a href="airports/jnb-airport-guide.html" class="airport-card"><span class="iata">JNB</span><span class="name">O.R. Tambo International Airport</span><span class="city">Johannesburg, South Africa</span></a>
+          <a href="airports/nbo-airport-guide.html" class="airport-card"><span class="iata">NBO</span><span class="name">Jomo Kenyatta International Airport</span><span class="city">Nairobi, Kenya</span></a>
+          <a href="airports/cmn-airport-guide.html" class="airport-card"><span class="iata">CMN</span><span class="name">Mohammed V International Airport</span><span class="city">Casablanca, Morocco</span></a>
+          <a href="airports/add-airport-guide.html" class="airport-card"><span class="iata">ADD</span><span class="name">Addis Ababa Bole International Airport</span><span class="city">Addis Ababa, Ethiopia</span></a>
+          <a href="airports/los-airport-guide.html" class="airport-card"><span class="iata">LOS</span><span class="name">Murtala Muhammed International Airport</span><span class="city">Lagos, Nigeria</span></a>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="about" style="background:white;border:1px solid #e0e0e0;border-radius:8px;padding:2rem;margin-top:2rem;">
+      <h2>About AirportGuideHub</h2>
+      <p>AirportGuideHub provides free, practical travel information for the world's busiest airports. Each guide covers terminals, ground transportation, airport lounges, WiFi access, dining options, and essential travel tips.</p>
+      <p>Our guides are structured to help travelers quickly find the information they need — whether it's how to get from the airport to the city center, which lounge accepts Priority Pass, or where to grab a meal before a long flight.</p>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 <a href="index.html">AirportGuideHub</a> &nbsp;|&nbsp; <a href="sitemap.xml">Sitemap</a> &nbsp;|&nbsp; Travel guides for the world's busiest airports</p>
+  </div>
+</footer>
+
+</body>
+</html>
